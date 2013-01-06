@@ -1,6 +1,6 @@
 require 'rest-client'
 require 'json'
-json = RestClient.get 'http://foobar.com/data'
+json = RestClient.get 'https://raw.github.com/aguglielmo/villian/master/sampledata'
 data = JSON.parse json
 if data['numbers'].grep(/^#{callerID}/)
 new_call = call "tel:+#{$callerID}", { :network => "SMS" }
